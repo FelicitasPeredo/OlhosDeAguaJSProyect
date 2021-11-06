@@ -5,7 +5,7 @@ let listaProductos = [
         "nombre": "Aros Afrika",
         "categoria": "Aros",
         "material": "Oro",
-        "precio": 2500,
+        "precio": 2800,
         "imagenProducto": "https://i.ibb.co/ckjrGS1/Aros-Argollas-Oro.jpg",
         "stock": 50
     }, {
@@ -13,7 +13,7 @@ let listaProductos = [
         "nombre": "Aros Afrika",
         "categoria": "Aros",
         "material": "Plata",
-        "precio": 2500,
+        "precio": 2800,
         "imagenProducto": "https://i.ibb.co/cvDK7yY/Aros-Argollas-Plata.jpg",
         "stock": 50
     }, {
@@ -21,7 +21,7 @@ let listaProductos = [
         "nombre": "Aros Oceania",
         "categoria": "Aros",
         "material": "Oro",
-        "precio": 2700,
+        "precio": 3000,
         "imagenProducto": "https://i.ibb.co/znzZHJy/Aros-Brillos.jpg",
         "stock": 50
     }, {
@@ -61,7 +61,7 @@ let listaProductos = [
         "nombre": "Aros Nova",
         "categoria": "Aros",
         "material": "Oro",
-        "precio": 2700,
+        "precio": 3000,
         "imagenProducto": "https://i.ibb.co/NZ2ZnSz/Aros-Perlita.jpg",
         "stock": 50
     }, {
@@ -69,7 +69,7 @@ let listaProductos = [
         "nombre": "Aros Meia",
         "categoria": "Aros",
         "material": "Oro",
-        "precio": 2700,
+        "precio": 3300,
         "imagenProducto": "https://i.ibb.co/BP038tj/Aros-Rayito.jpg",
         "stock": 50
     },
@@ -79,22 +79,22 @@ let listaProductos = [
         "nombre": "Anillo Egeo",
         "categoria": "Anillos",
         "material": "Oro",
-        "precio": 2000,
+        "precio": 2500,
         "imagenProducto": "https://i.ibb.co/pbV2b7d/Anillo-Brillos-Oro.jpg",
         "stock": 50
     }, {
         "id": "ANILLOS2",
         "nombre": "Anillo Artico",
         "categoria": "Anillos",
-        "material": "Plata",
-        "precio": 2300,
+        "material": "Oro",
+        "precio": 2000,
         "imagenProducto": "https://i.ibb.co/XzZWqfK/Anillo-Gaia-Oro.jpg", 
         "stock": 50 
     }, {
         "id": "ANILLOS3",
         "nombre": "Anillo Gaia",
         "categoria": "Anillos",
-        "material": "Plata",
+        "material": "Oro",
         "precio": 2300,
         "imagenProducto": "https://i.ibb.co/wp5pzSz/Anillo-Runa-Oro.jpg", 
         "stock": 50 
@@ -105,7 +105,7 @@ let listaProductos = [
         "nombre": "Collar Asia",
         "categoria": "Collares",
         "material": "Oro",
-        "precio": 3900,
+        "precio": 4200,
         "imagenProducto": "https://i.ibb.co/s1W7Qwt/Collar-Circulo-Oro.jpg",
         "stock": 50,
     }, {
@@ -113,7 +113,7 @@ let listaProductos = [
         "nombre": "Collar Indica",
         "categoria": "Collares",
         "material": "Oro",
-        "precio": 3500,
+        "precio": 4000,
         "imagenProducto": "https://i.ibb.co/QK4mzK3/Collar-Grueso-Oro.jpg",
         "stock": 50
     }, {
@@ -121,7 +121,7 @@ let listaProductos = [
         "nombre": "Collar Indica",
         "categoria": "Collares",
         "material": "Plata",
-        "precio": 3500,
+        "precio": 4000,
         "imagenProducto": "https://i.ibb.co/Fb9vpNs/Collar-Grueso-Plata.jpg",
         "stock": 50
     }, {
@@ -129,15 +129,15 @@ let listaProductos = [
         "nombre": "Collar Amora",
         "categoria": "Collares",
         "material": "Plata",
-        "precio": 3700,
+        "precio": 3500,
         "imagenProducto": "https://i.ibb.co/tZdHnNM/Collar-Corazon-Plata.jpg",
         "stock": 50,
     }, {
         "id": "COLLARES5",
         "nombre": "Collar Oporto",
         "categoria": "Collares",
-        "material": "Oro",
-        "precio": 3900,
+        "material": "Plata",
+        "precio": 3800,
         "imagenProducto": "https://i.ibb.co/4gxSCRC/Collar-Cuadrado-Plata.jpg",
         "stock": 50,
     }, {
@@ -145,7 +145,7 @@ let listaProductos = [
         "nombre": "Collar Lisboa",
         "categoria": "Collares",
         "material": "Oro",
-        "precio": 3900,
+        "precio": 3800,
         "imagenProducto": "https://i.ibb.co/5W27LSG/Collar-Dije-Oro.jpg",
         "stock": 50,
     }, {
@@ -153,7 +153,7 @@ let listaProductos = [
         "nombre": "Collar Laos",
         "categoria": "Collares",
         "material": "Oro",
-        "precio": 3900,
+        "precio": 4000,
         "imagenProducto": "https://i.ibb.co/HYpfpMC/Collar-Dije-Perla.jpg",
         "stock": 50,
     }, {
@@ -161,7 +161,7 @@ let listaProductos = [
         "nombre": "Collar Serp",
         "categoria": "Collares",
         "material": "Oro",
-        "precio": 3900,
+        "precio": 3500,
         "imagenProducto": "https://i.ibb.co/tzD9QXC/Collar-Serpiente-Oro.jpg",
         "stock": 50,
     }, {
@@ -169,7 +169,7 @@ let listaProductos = [
         "nombre": "Collar Sintra",
         "categoria": "Collares",
         "material": "Plata",
-        "precio": 3900,
+        "precio": 3000,
         "imagenProducto": "https://i.ibb.co/3rwpW3b/Collar-Mini-Plata.jpg",
         "stock": 50,
     }

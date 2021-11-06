@@ -128,3 +128,10 @@ if(comprar) {
     // Inyecto el nuevo msj del carrito con el producto seleccionado
     document.querySelector("#visualCarrito").appendChild(productosEnCarrito);
 }
+
+//Defino en una variable el boton que voy a utilizar para disparar el evento
+const btnAgregarDestinatario = document.querySelector("#btnAgregarDestinatario");
+//Que mi funcion ocurra cuando el usuario hace click en el boton
+btnAgregarDestinatario.addEventListener("click", () => {
+    agregarNuevoDestinatario();
+})
