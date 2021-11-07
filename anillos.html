@@ -85,10 +85,33 @@
           </div>
         </div>
     </section>
-    <section class="container">
-        <div class="cards-row row">
+    <main class="container d-flex">
+        <div class="container">
+            <select class="form-select"  aria-label="Default select example" id="filtrar">
+                <option selected>Filtra por material</option>
+                <option value=" ">Todos</option>
+                <option value="Oro">Oro</option>
+                <option value="Plata">Plata</option>
+            </select>
         </div>
-    </section>
+        <section class="container col-8 d-flex" id="anillos-container">
+        </section>
+        <section class="container">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Ctdad</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Detalle</th>
+                    <th scope="col">Precio</th>
+                  </tr>
+                </thead>
+                <tbody class="col-4" id="carrito-container">
+                  </tr>
+                </tbody>
+              </table>
+        </section>
+    </main>
     <footer>
         <section>
             <!-- Newsletter -->
@@ -112,6 +135,7 @@
     </script>
     <script src="listaProductos.js"></script>
     <script src="script.js"></script>
-    <script src="cardsProductosDinamica.js"></script>
+    <!-- <script src="cardsProductosDinamica.js"></script> -->
+    <script src="carritoDeCompras.js"></script>
 </body>
 </html>

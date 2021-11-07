@@ -132,6 +132,6 @@ if(comprar) {
 //Defino en una variable el boton que voy a utilizar para disparar el evento
 const btnAgregarDestinatario = document.querySelector("#btnAgregarDestinatario");
 //Que mi funcion ocurra cuando el usuario hace click en el boton
-btnAgregarDestinatario.addEventListener("click", () => {
-    agregarNuevoDestinatario();
-})
+// btnAgregarDestinatario.addEventListener("click", () => {
+//     agregarNuevoDestinatario();
+// })

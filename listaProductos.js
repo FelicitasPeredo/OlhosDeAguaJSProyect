@@ -94,7 +94,7 @@ let listaProductos = [
         "id": "ANILLOS3",
         "nombre": "Anillo Gaia",
         "categoria": "Anillos",
-        "material": "Oro",
+        "material": "Plata",
         "precio": 2300,
         "imagenProducto": "https://i.ibb.co/wp5pzSz/Anillo-Runa-Oro.jpg", 
         "stock": 50 
@@ -177,10 +177,12 @@ let listaProductos = [
 
 localStorage.setItem("listaProductos", JSON.stringify(listaProductos));
 
+
+//Nueva lista solamente de anillos
 let listaAnillos = [
     //ANILLOS
     {
-        "id": "ANILLOS1",
+        "id": 1,
         "nombre": "Anillo Egeo",
         "categoria": "Anillos",
         "material": "Oro",
@@ -188,7 +190,7 @@ let listaAnillos = [
         "imagenProducto": "https://i.ibb.co/pbV2b7d/Anillo-Brillos-Oro.jpg",
         "stock": 50
     }, {
-        "id": "ANILLOS2",
+        "id": 2,
         "nombre": "Anillo Artico",
         "categoria": "Anillos",
         "material": "Oro",
@@ -196,10 +198,10 @@ let listaAnillos = [
         "imagenProducto": "https://i.ibb.co/XzZWqfK/Anillo-Gaia-Oro.jpg", 
         "stock": 50 
     }, {
-        "id": "ANILLOS3",
+        "id": 3,
         "nombre": "Anillo Gaia",
         "categoria": "Anillos",
-        "material": "Oro",
+        "material": "Plata",
         "precio": 2300,
         "imagenProducto": "https://i.ibb.co/wp5pzSz/Anillo-Runa-Oro.jpg", 
         "stock": 50 

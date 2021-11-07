@@ -1,6 +1,7 @@
 let productosAnillos = JSON.parse(localStorage.getItem("listaAnillos"));
 //console.log(productosAnillos);
 
+//Muestro productos de manera dinamica, solamente para anillos.html
 productosAnillos.forEach(el => {
     let card = document.createElement("div");
     card.setAttribute("class","card col-md-4");
