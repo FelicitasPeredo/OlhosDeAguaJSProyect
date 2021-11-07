@@ -177,6 +177,37 @@ let listaProductos = [
 
 localStorage.setItem("listaProductos", JSON.stringify(listaProductos));
 
+let listaAnillos = [
+    //ANILLOS
+    {
+        "id": "ANILLOS1",
+        "nombre": "Anillo Egeo",
+        "categoria": "Anillos",
+        "material": "Oro",
+        "precio": 2500,
+        "imagenProducto": "https://i.ibb.co/pbV2b7d/Anillo-Brillos-Oro.jpg",
+        "stock": 50
+    }, {
+        "id": "ANILLOS2",
+        "nombre": "Anillo Artico",
+        "categoria": "Anillos",
+        "material": "Oro",
+        "precio": 2000,
+        "imagenProducto": "https://i.ibb.co/XzZWqfK/Anillo-Gaia-Oro.jpg", 
+        "stock": 50 
+    }, {
+        "id": "ANILLOS3",
+        "nombre": "Anillo Gaia",
+        "categoria": "Anillos",
+        "material": "Oro",
+        "precio": 2300,
+        "imagenProducto": "https://i.ibb.co/wp5pzSz/Anillo-Runa-Oro.jpg", 
+        "stock": 50 
+    }
+]
+
+localStorage.setItem("listaAnillos", JSON.stringify(listaAnillos));
+
 //<img src="https://i.ibb.co/pbV2b7d/Anillo-Brillos-Oro.jpg" alt="Anillo-Brillos-Oro" border="0">
 //<img src="https://i.ibb.co/XzZWqfK/Anillo-Gaia-Oro.jpg" alt="Anillo-Gaia-Oro" border="0">
 //<img src="https://i.ibb.co/wp5pzSz/Anillo-Runa-Oro.jpg" alt="Anillo-Runa-Oro" border="0"></img>
