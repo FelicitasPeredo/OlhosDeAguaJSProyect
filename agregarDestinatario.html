@@ -60,7 +60,19 @@
     <section id="visualCarrito">
         <!-- Visualizacion de la futura compra -->
         <h2>Carrito de Compras</h2>
-        <p id="carritoVacio">Todavia no seleccionaste ningun producto.</p>
+        <p id="carritoVacio">Ingrese la siguiente informacion del destinatario y pulse continuar para ver el resumen de su compra.</p>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Detalle</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+            <tbody class="col-4" id="productos-carrito">
+            </tbody>
+          </table>
     </section>
     <section>
         <!-- Formulario de Datos del Destinatario para realizar la compra y envio -->
@@ -113,7 +125,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
         integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous">
     </script>
+    <script src="jquery-3.6.0.min.js"></script>
     <script src="listaProductos.js"></script>
-    <script src="script.js"></script>
+    <script src="agregarDestinatario.js"></script>
 </body>
 </html>

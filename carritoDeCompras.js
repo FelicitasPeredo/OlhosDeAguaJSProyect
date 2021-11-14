@@ -1,7 +1,7 @@
 let containerAnillos = document.querySelector("#anillos-container");
 let containerCarrito = document.querySelector("#carrito-container");
 
-function mostrarProd (array) {
+function mostrarProdAnillos (array) {
     containerAnillos.innerHTML = "";
     for(e of array){
         containerAnillos.innerHTML+=`
@@ -17,12 +17,11 @@ function mostrarProd (array) {
     }
 }
 function mostrarCarrito(array){
-    let i=0;
     containerCarrito.innerHTML="";
     for (e of array){
         containerCarrito.innerHTML+=`
         <tr>
-            <th scope="row">${i++}</th>
+            <th scope="row">1</th>
             <td>${e.nombre}</td>
             <td>${e.material}</td>
             <td>${e.precio}</td>
@@ -79,13 +78,13 @@ function filtrar(array, dato) {
     return array.filter(e => e.material == dato);
 }
 
-mostrarProd(listaAnillos);
+mostrarProdAnillos(listaAnillos);
 
 if(localStorage.getItem("carrito")){
     mostrarCarrito(JSON.parse(localStorage.getItem("carrito")));
     sumarProductos(JSON.parse(localStorage.getItem("carrito")));
 }
 
-document.querySelector("#filtrar").addEventListener("change", (e)=>{
-    e.target.value != "" ? mostrarProd(filtrar(listaAnillos, e.target.value)) : mostrarProd(listaAnillos);
+document.querySelector("#filtrar-anillos").addEventListener("change", (e)=>{
+    e.target.value != " " ? mostrarProdAnillos(filtrar(listaAnillos, e.target.value)) : mostrarProdAnillos(listaAnillos);
 })
