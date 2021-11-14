@@ -20,6 +20,10 @@ class datosDestinatario {
     }
 }
 
+const addAlert = (tittle, message, cssClass) => {
+    Swal.fire(tittle, message, cssClass);
+};
+
 const agregarNuevoDestinatario = () => {
     //Utilizo los valores del formulario 
     const mailUsuario = document.getElementById("mail").value;
@@ -34,22 +38,43 @@ const agregarNuevoDestinatario = () => {
     const dni = document.getElementById("dni").value;
     const cuponDesc = document.getElementById("cupon").value;
     //Creo un nuevo objeto con los datos que ingrese el nuevo destinatario
-    const nuevoDestinatario = new datosDestinatario(mailUsuario, nombre, apellido, telefono, calle, altura, dpto, CP, provincia, dni, cuponDesc);
-    console.log(nuevoDestinatario);
 
-    if (localStorage.getItem("listaUsuarios") == null) {
-        //Todavia nunca se guardo en el local storage una lista de los usuarios
-        listaUsuarios.push(nuevoDestinatario);
-        localStorage.setItem("listaUsuarios", JSON.stringify(listaUsuarios));
-    }
-    else {
-        //Creo una nueva lista en donde primero guarde los usuarios ya almacenados anteriormente pero pueda agregar tambien el nuevo ingresado
-        let listaUsuariosCompleta = JSON.parse(localStorage.getItem("listaUsuarios"));
-        //Agrego a la lista completa el nuevo usuario
-        listaUsuariosCompleta.push(nuevoDestinatario);
-        //Guardo en el local storeage la lista completa
-        localStorage.setItem("listaUsuarios", JSON.stringify(listaUsuariosCompleta));
-    }
+    if (
+        mailUsuario === "" ||
+        nombre === "" ||
+        apellido === "" ||
+        telefono === "" || 
+        calle === "" ||
+        altura === "" ||
+        dpto === "" ||
+        CP === "" ||
+        provincia === "" ||
+        dni === "" ||
+        cuponDesc === ""
+      ) {
+        return addAlert("Completa los campos vacios!", "", "error");
+      } else {
+        const nuevoDestinatario = new datosDestinatario(mailUsuario, nombre, apellido, telefono, calle, altura, dpto, CP, provincia, dni, cuponDesc);
+        console.log(nuevoDestinatario);
+
+        if (localStorage.getItem("listaUsuarios") == null) {
+            //Todavia nunca se guardo en el local storage una lista de los usuarios
+            listaUsuarios.push(nuevoDestinatario);
+            localStorage.setItem("listaUsuarios", JSON.stringify(listaUsuarios));
+        }
+        else {
+            //Creo una nueva lista en donde primero guarde los usuarios ya almacenados anteriormente pero pueda agregar tambien el nuevo ingresado
+            let listaUsuariosCompleta = JSON.parse(localStorage.getItem("listaUsuarios"));
+            //Agrego a la lista completa el nuevo usuario
+            listaUsuariosCompleta.push(nuevoDestinatario);
+            //Guardo en el local storeage la lista completa
+            localStorage.setItem("listaUsuarios", JSON.stringify(listaUsuariosCompleta));
+        }
+
+        const form = document.querySelector("#form");
+        form.reset();
+        addAlert("Datos procesados correctamente.", "", "success");
+    } 
 }
 
 function mostrarCarritoDelDestinatario(array){
@@ -79,10 +104,12 @@ function mostrarProductos() {
 const btnAgregarDestinatario = document.querySelector("#btnAgregarDestinatario");
 //Que mi funcion ocurra cuando el usuario hace click en el boton
 
+mostrarProductos();
+
 btnAgregarDestinatario.addEventListener("click", (e) => {
     e.preventDefault();
     agregarNuevoDestinatario();
-    mostrarProductos();
+
 });
 
 
