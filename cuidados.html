@@ -60,33 +60,77 @@
     <section>
         <!-- Carrousel -->
     </section>
-    <section>
-        <a href="aros.html">Aros</a>
-        <a href="collares.html">Collares</a>
-        <a href="anillos.html">Anillos</a>
+    <section class="container-fluid p-0 m-0">
+        <div class="row">
+          <div class="img-link-grid-item col-lg-4 col-md-12 col-sm-12 col-xs-12">
+            <div class="links-titulos">
+              <p class="link-title-format font1">Aros</p>
+            </div>
+            <a class="fondo-link" href="aros.html">
+              <img src="https://i.ibb.co/GCjPkfn/Created-with-RNI-Films-app-Preset-Agfa-Optima-200.jpg" alt="Aros" class="img-links">
+            </a>
+          </div>
+          <div class="img-link-grid-item col-lg-4 col-md-12 col-sm-12 col-xs-12">
+            <div class="links-titulos">
+              <p class="link-title-format font1">Anillos</p>
+            </div>
+            <a class="fondo-link" href="anillos.html">
+              <img src="https://i.ibb.co/NxTCGRT/Anillos.jpg" alt="Anillos" class="img-links">
+            </a>
+          </div>
+          <div class="img-link-grid-item col-lg-4 col-md-12 col-sm-12 col-xs-12">
+            <div class="links-titulos">
+              <p class="link-title-format font1">Collares</p>
+            </div>
+            <a class="fondo-link" href="collares.html">
+              <img src="https://i.ibb.co/M9cTWcV/Created-with-RNI-Films-app-Preset-Agfa-Optima-200.jpg" alt="Collares" class="img-links">
+            </a>
+          </div>
+        </div>
     </section>
-    <section>
-        <p>
-            La transpiración, nadar en el mar o pileta, ciertos químicos presentes en los maquillajes o la humedad, pueden provocar manchas en el brillo y baño de tus accesorios. Por eso, te ofrecemos algunos consejos para cuidar tus joyitas: 
-            Guardá tus joyas en un lugar fresco y seco, lejos de la exposición directa del sol.
-            Aplicá perfume, cremas o algún otro producto abrasivo, previamente a colocarte los accesorios.
-            Evitá usarlas mientras te bañás o haces ejercicio.
-        </p>
-    </section>
-    <footer>
-        <section>
-            <!-- Newsletter -->
-        </section>
-        <section>
-            <!-- links redes sociales -->
-            <a href="">Instagram</a>
-        </section>
-        <section>
-            <p>
-                Copyright Olhos de Agua 2021. Todos los derechos reservados.
+    <section class="cuidados-container container-fluid row">
+        <div class="col-5">
+            <div id="carouselWithIndicators" class="carousel slide m-3" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="0" class="active"></li>
+                  <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="1"></li>
+                  <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="carousel-img"src="https://i.ibb.co/K5Qv65L/Created-with-RNI-Films-app-Preset-Agfa-Optima-200.jpg" class="d-block w-100" alt="Slide 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="carousel-img"src="https://i.ibb.co/M26Zwxd/Created-with-RNI-Films-app-Preset-Agfa-Optima-200.jpg" class="d-block w-100" alt="Slide 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="carousel-img"src="https://i.ibb.co/hcNqz6q/Created-with-RNI-Films-app-Preset-Agfa-Optima-200.jpg" class="d-block w-100" alt="Slide 3">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselWithIndicators" role="button" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselWithIndicators" role="button" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </a>
+              </div>
+        </div>
+        <div class="col-7 container d-flex flex-wrap justify-content-center align-items-center">
+            <p class="p-1 m-3">La transpiración, nadar en el mar o pileta, ciertos químicos presentes en los maquillajes o la humedad, pueden provocar manchas en el brillo y baño de tus accesorios.
+                <br><br><br>Por eso, te ofrecemos algunos consejos para cuidar tus joyitas: <br><br>
+                - Guardá tus joyas en un lugar fresco y seco, lejos de la exposición directa del sol. <br>
+                - Aplicá perfume, cremas o algún otro producto abrasivo, previamente a colocarte los accesorios. <br>
+                - Evitá usarlas mientras te bañás o haces ejercicio.
             </p>
-        </section>
-    </footer>
+        </div>
+    </section>
+    <footer class="footer container-fluid d-flex justify-content-center align-items-center">
+        <a href="https://www.instagram.com/olhos.deagua/?hl=es" class="p-1"><img id="icon" src="https://i.ibb.co/x28KK3t/instagram.png" alt="instagram"></a>
+        <p class="footer-font p-1 m-3">Olhos de Água Jewelry <br> <span class="detail">Símbolos de amor & protección</span></p>
+        <p class="footer-font p-1 m-3">Copyright Olhos de Agua 2021. Todos los derechos reservados.</p>
+      </footer>
     <!-- esto es para javascript de bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
         integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous">
@@ -100,3 +144,8 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<!-- <img src="https://i.ibb.co/K5Qv65L/Created-with-RNI-Films-app-Preset-Agfa-Optima-200.jpg" alt="Created-with-RNI-Films-app-Preset-Agfa-Optima-200" border="0">
+<img src="https://i.ibb.co/M26Zwxd/Created-with-RNI-Films-app-Preset-Agfa-Optima-200.jpg" alt="Created-with-RNI-Films-app-Preset-Agfa-Optima-200" border="0">
+<img src="https://i.ibb.co/z2KHPpG/Created-with-RNI-Films-app-Preset-Agfa-Optima-200.jpg" alt="Created-with-RNI-Films-app-Preset-Agfa-Optima-200" border="0">
+<img src="https://i.ibb.co/hcNqz6q/Created-with-RNI-Films-app-Preset-Agfa-Optima-200.jpg" alt="Created-with-RNI-Films-app-Preset-Agfa-Optima-200" border="0"> -->
