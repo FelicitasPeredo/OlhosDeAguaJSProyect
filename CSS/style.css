@@ -418,9 +418,9 @@ body {
 }
 
 .fullscreen-menu__image-container {
-  width: 8rem;
+  width: 17rem;
   /* Make square */
-  height: 8rem;
+  height: 17rem;
   /* Make square */
   background-image: url("https://i.ibb.co/93qp1PM/logo-Olhos.png");
   /* Apply the image as the background */
@@ -458,20 +458,25 @@ table {
   border-collapse: separate !important;
 }
 
+#btn-link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
 #btn-iniciar-compra {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
   padding-left: 2px;
   letter-spacing: 0.0625rem;
-  word-spacing: 0.1875rem;
   font-weight: 300;
   text-transform: uppercase;
   text-decoration: none;
   color: #E3B04B;
   background-color: white;
   margin: 0rem 0.2rem 0.2rem 0rem;
-  padding: 0.8rem 0rem 0.8rem 0.8rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   box-sizing: border-box;
   border-radius: 0.1875rem;
   box-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
