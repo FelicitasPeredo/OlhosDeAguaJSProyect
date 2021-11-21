@@ -1,21 +1,5 @@
-let containerAnillos = document.querySelector("#anillos-container");
 let containerCarrito = document.querySelector("#carrito-container");
 
-function mostrarProdAnillos (array) {
-    containerAnillos.innerHTML = "";
-    for(e of array){
-        containerAnillos.innerHTML+=`
-        <div class="card">
-            <img src="${e.imagenProducto}" class="card-img-top" alt="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title">${e.nombre}</h5>
-                <p class="card-text">${e.material}</p>
-                <p class="card-text"><small class="text-muted">${e.precio}</small></p>
-                <button class="btn btn-primary" onclick="capturar(${e.id})">Comprar</button>
-            </div>
-        </div>`;
-    }
-}
 function mostrarCarrito(array){
     containerCarrito.innerHTML="";
     for (e of array){
@@ -25,7 +9,7 @@ function mostrarCarrito(array){
             <td>${e.nombre}</td>
             <td>${e.material}</td>
             <td>${e.precio}</td>
-            <td><button class="btn btn-danger" onclick="quitar(${e.id})">Eliminar</button></td>
+            <td><button class="btn btn-danger" onclick="quitar(${e.id})">X</button></td>
         </tr>`
     }
     containerCarrito.innerHTML +=`
@@ -48,7 +32,7 @@ function guardarStorage(array){
     localStorage.setItem("carrito", JSON.stringify(array));
 }
 function capturar (id) {
-    let productoSeleccionado = listaAnillos.find(e => e.id == id);
+    let productoSeleccionado = listaProductos.find(e => e.id == id);
     //agrego al storage el producto seleccionado en la lista y guardo en el storage el array carrito con el producto seleccionado
     guardarStorage(agregarStorage(productoSeleccionado));
     mostrarCarrito(JSON.parse(localStorage.getItem("carrito")));
@@ -78,13 +62,10 @@ function filtrar(array, dato) {
     return array.filter(e => e.material == dato);
 }
 
-mostrarProdAnillos(listaAnillos);
-
 if(localStorage.getItem("carrito")){
     mostrarCarrito(JSON.parse(localStorage.getItem("carrito")));
     sumarProductos(JSON.parse(localStorage.getItem("carrito")));
 }
-
-document.querySelector("#filtrar-anillos").addEventListener("change", (e)=>{
-    e.target.value != " " ? mostrarProdAnillos(filtrar(listaAnillos, e.target.value)) : mostrarProdAnillos(listaAnillos);
-})
+// document.querySelector("#filtrar-anillos").addEventListener("change", (e)=>{
+//     e.target.value != " " ? mostrarProdAnillos(filtrar(listaProductos, e.target.value)) : mostrarProdAnillos(listaProductos);
+// })
