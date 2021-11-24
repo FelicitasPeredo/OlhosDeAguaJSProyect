@@ -2,4 +2,8 @@
 let containerAros = document.querySelector("#aros-container");
 let listaProductos = JSON.parse(localStorage.getItem("listaProductos"));
 
-mostrarProductos(filtrar(listaProductos, "Aros"), containerAros);
+mostrarProductos(filtrarCategoria(listaProductos, "Aros"), containerAros);
+
+document.querySelector("#filtrar-aros").addEventListener("change", (e)=>{
+    e.target.value != " " ? mostrarProductos(filtrarCategoria(filtrarMaterial(listaProductos, e.target.value), "Aros"), containerAros) : mostrarProductos(filtrar(listaProductos, "Aros"), containerAros);
+})

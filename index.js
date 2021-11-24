@@ -28,7 +28,7 @@ document.querySelector("#ordenar-precio").addEventListener("change", (e)=>{
 })
 
 document.querySelector("#filtrar-productos").addEventListener("change", (e)=>{
-    e.target.value != " " ? mostrarProductos(filtrar(listaProductos, e.target.value), containerProductos) : mostrarProductos(listaProductos, containerProductos);
+    e.target.value != " " ? mostrarProductos(filtrarCategoria(listaProductos, e.target.value), containerProductos) : mostrarProductos(listaProductos, containerProductos);
 })
 
 

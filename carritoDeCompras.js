@@ -6,6 +6,7 @@ function mostrarCarrito(array){
         containerCarrito.innerHTML+=`
         <tr>
             <th scope="row">1</th>
+            <td><img class="prod-carrito-img" src="${e.imagenProducto}"></td>
             <td>${e.nombre}</td>
             <td>${e.material}</td>
             <td>${e.precio}</td>
@@ -34,7 +35,7 @@ function guardarStorage(array){
 function capturar (id) {
     let productoSeleccionado = listaProductos.find(e => e.id == id);
     //agrego al storage el producto seleccionado en la lista y guardo en el storage el array carrito con el producto seleccionado
-    swal("El producto ha sido guardado en el carrito de compras exitosamente!", "", "success")
+    swal("El producto ha sido guardado en el carrito de compras!", "", "success")
     guardarStorage(agregarStorage(productoSeleccionado));
     mostrarCarrito(JSON.parse(localStorage.getItem("carrito")));
     sumarProductos();
@@ -59,14 +60,7 @@ function sumarProductos() {
     document.querySelector("#totalCarrito").textContent = suma;
 }
 
-function filtrar(array, dato) {
-    return array.filter(e => e.material == dato);
-}
-
 if(localStorage.getItem("carrito")){
     mostrarCarrito(JSON.parse(localStorage.getItem("carrito")));
     sumarProductos(JSON.parse(localStorage.getItem("carrito")));
 }
-// document.querySelector("#filtrar-anillos").addEventListener("change", (e)=>{
-//     e.target.value != " " ? mostrarProdAnillos(filtrar(listaProductos, e.target.value)) : mostrarProdAnillos(listaProductos);
-// })

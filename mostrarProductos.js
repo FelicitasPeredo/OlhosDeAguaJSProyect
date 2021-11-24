@@ -1,6 +1,10 @@
 //Filtro la lista unica de productos segun categoria para inyectarla en las distintas paginas
-function filtrar(array, dato) {
+function filtrarCategoria(array, dato) {
     return array.filter(e => e.categoria == dato);
+}
+
+function filtrarMaterial(array, dato) {
+    return array.filter(e => e.material == dato);
 }
 
 function ordenarMenorAMayor(array) {

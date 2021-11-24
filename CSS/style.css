@@ -15,6 +15,11 @@
   height: 100%;
 }
 
+.prod-carrito-img {
+  width: 80px;
+  height: 100px;
+}
+
 .no-padding {
   padding: 0px !important;
 }
@@ -580,6 +585,26 @@ input, textarea {
   box-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
   border: 0.625rem solid transparent;
   border-top: 0.625rem solid white;
+}
+
+.select-material {
+  width: 200px;
+  margin: 15px;
+  padding: 8px;
+  letter-spacing: 0.0625rem;
+  font-weight: 300;
+  text-decoration: none;
+  color: #E3B04B;
+}
+
+.select-format {
+  width: 200px;
+  margin: 15px;
+  padding: 8px;
+  letter-spacing: 0.0625rem;
+  font-weight: 300;
+  text-decoration: none;
+  color: #E3B04B;
 }
 
 /*# sourceMappingURL=style.css.map */
