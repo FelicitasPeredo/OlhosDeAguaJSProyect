@@ -92,16 +92,14 @@
           </div>
         </div>
     </section>
-    <main class="container-fluid d-flex">
-      <div class="container col-2">
-          <select class="form-select" aria-label="Default select example" id="filtrar-anillos">
-              <option selected>Filtrar por Material</option>
-              <option value=" ">Todos</option>
-              <option value="Oro">Oro</option>
-              <option value="Plata">Plata</option>
-          </select>
-      </div>
-      <section class="container col-10 d-flex flex-wrap" id="collares-container">
+    <main class="container-fluid">
+      <select class="form-select" aria-label="Default select example" id="filtrar-anillos">
+        <option selected>Filtrar por Material</option>
+        <option value=" ">Todos</option>
+        <option value="Oro">Oro</option>
+        <option value="Plata">Plata</option>
+    </select>
+      <section class="d-flex justify-content-center flex-wrap" id="collares-container">
       </section>
   </main>
     <footer class="footer container-fluid d-flex justify-content-center align-items-center">
@@ -134,7 +132,7 @@
                   </tbody>
                 </table>
                 <div>
-                  <a href="agregarDestinatario.html"><button type="button" class="btn btn-info" id="btn-finalizar-compra">Finalizar la compra</button></a>
+                  <a href="agregarDestinatario.html" id="btn-link"><button id="btn-iniciar-compra">Iniciar Compra</button></a>
                 </div>
           </div>
           <a target="_blank" href="https://twitter.com/matchboxhero10" class="social-button--twitter">

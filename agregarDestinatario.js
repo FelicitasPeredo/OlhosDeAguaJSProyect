@@ -109,7 +109,6 @@ mostrarProductos();
 btnAgregarDestinatario.addEventListener("click", (e) => {
     e.preventDefault();
     agregarNuevoDestinatario();
-
 });
 
 

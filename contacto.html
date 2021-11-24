@@ -65,32 +65,32 @@
         </div>
     </header>
     <section>
+        <h2 class="formato-titulo d-flex justify-content-center">En que podemos ayudarte?</h2>
         <section class="form-container d-flex justify-content-center flex-wrap container">
-            <h2 class="titulos">En que podemos ayudarte?</h2>
             <form action="" class="formato-texto" id="formulario">
                 <div class="form-nombre-apellido">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre y apellido" name="Nombre">
-                        <label for="nombre">Nombre y Apellido</label>
+                        <input type="text" class="form-control" id="nombre-contacto" placeholder="Ingrese su nombre y apellido" name="Nombre">
+                        <label for="nombre" class="formato-texto">Nombre y Apellido</label>
                     </div>
-                    <div class="form-floating">
-                        <input type="number" class="form-control" id="telefono" placeholder="Ingrese su numero de contacto" name="Telefono">
-                        <label for="telefono">Número de Contacto</label>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="telefono-contacto" placeholder="Ingrese su numero de contacto" name="Telefono">
+                        <label for="telefono" class="formato-texto">Número de Contacto</label>
                     </div>
                 </div>
                 <div class="form-mail-mensaje">
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com" name="Email">
-                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email-contacto" placeholder="name@example.com" name="Email">
+                        <label for="email" class="formato-texto">Email</label>
                     </div>
                     <div class="form-floating">
-                        <textarea class="form-control" placeholder="Envíenos su mensaje" id="mensaje"
+                        <textarea class="form-control" placeholder="Envíenos su mensaje" id="mensaje-contacto"
                             style="height: 100px" name="Mensaje"></textarea>
-                        <label for="mensaje">Envíenos su mensaje</label>
+                        <label for="mensaje" class="formato-texto">Envíenos su mensaje</label>
                     </div>
                 </div>
-                <div>
-                    <input type="submit" class="btn formato-boton btn-lg" value="Enviar Mensaje">
+                <div class="m-3">
+                    <button type="submit" id="btn-contacto">Enviar</button>
                 </div>
                 <div class="formato-texto">
                     <p>
@@ -133,7 +133,7 @@
                     </tbody>
                   </table>
                   <div>
-                    <a href="agregarDestinatario.html"><button type="button" class="btn btn-info" id="btn-finalizar-compra">Finalizar la compra</button></a>
+                    <a href="agregarDestinatario.html" id="btn-link"><button id="btn-iniciar-compra">Iniciar Compra</button></a>
                   </div>
             </div>
             <a target="_blank" href="https://twitter.com/matchboxhero10" class="social-button--twitter">
@@ -149,7 +149,10 @@
     </script>
     <script src="jquery-3.6.0.min.js"></script>
     <script src="eventojQuery.js"></script>
-    <script src="listaProductos.js"></script>
-    <script src="script.js"></script>
+     <!-- sweetalert -->
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <!-- javascript para el form -->
+     <script src="Sender/smtp.js"></script>
+     <script src="Sender/sender.js"></script>
 </body>
 </html>
