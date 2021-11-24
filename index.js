@@ -13,27 +13,24 @@ document.addEventListener("DOMContentLoaded", function(){
 let containerProductos = document.querySelector("#productos-container");
 let listaProductos = JSON.parse(localStorage.getItem("listaProductos"));
 
-function ordenar(array) {
-    array.sort((a,b) => {
-        if (a.precio > b.precio) {
-            return 1;
-        }
-        if (a.precio < b.precio) {
-            return -1;
-        }
-        return 0
-    })
-}
+mostrarProductos(listaProductos, containerProductos);
 
 document.querySelector("#ordenar-precio").addEventListener("change", (e)=>{
     if (e.target.value == " ") {
-        mostrarProductos(listaProductos);
+        mostrarProductos(listaProductos, containerProductos);
     } else if (e.target.value == "MenorAMayor") {
-        ordenar(listaProductos);
-        mostrarProductos(listaProductos);
+        ordenarMenorAMayor(listaProductos);
+        mostrarProductos(listaProductos, containerProductos);
+    } else if (e.target.value == "MayorAMenor") {
+        ordenarMayorAMenor(listaProductos);
+        mostrarProductos(listaProductos, containerProductos);
     }
 })
 
-mostrarProductos(listaProductos, containerProductos);
+document.querySelector("#filtrar-productos").addEventListener("change", (e)=>{
+    e.target.value != " " ? mostrarProductos(filtrar(listaProductos, e.target.value), containerProductos) : mostrarProductos(listaProductos, containerProductos);
+})
+
+
 
 

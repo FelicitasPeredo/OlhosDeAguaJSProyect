@@ -34,6 +34,7 @@ function guardarStorage(array){
 function capturar (id) {
     let productoSeleccionado = listaProductos.find(e => e.id == id);
     //agrego al storage el producto seleccionado en la lista y guardo en el storage el array carrito con el producto seleccionado
+    swal("El producto ha sido guardado en el carrito de compras exitosamente!", "", "success")
     guardarStorage(agregarStorage(productoSeleccionado));
     mostrarCarrito(JSON.parse(localStorage.getItem("carrito")));
     sumarProductos();

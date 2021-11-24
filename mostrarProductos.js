@@ -1,21 +1,30 @@
-//FETCH .JSON
-const obtenerDatosJSON = () => {
-    //ir a buscar
-    //me devuelve una promesa fullfilled y me trae el resultado
-    //imprimo el resultado en la consola y lo inyecto en el html
-    fetch("listaProductos.json")
-        //el metodo json me convierte la rta a un array
-        .then(response => response.json())
-        .then(result => {
-            let lista = result;
-            return lista
-        }).catch((error => console.log(error)));
-}
-obtenerDatosJSON()
-console.log(obtenerDatosJSON())
 //Filtro la lista unica de productos segun categoria para inyectarla en las distintas paginas
 function filtrar(array, dato) {
     return array.filter(e => e.categoria == dato);
+}
+
+function ordenarMenorAMayor(array) {
+    array.sort((a,b) => {
+        if (a.precio > b.precio) {
+            return 1;
+        }
+        if (a.precio < b.precio) {
+            return -1;
+        }
+        return 0
+    })
+}
+
+function ordenarMayorAMenor(array) {
+    array.sort((a,b) => {
+        if (a.precio < b.precio) {
+            return 1;
+        }
+        if (a.precio > b.precio) {
+            return -1;
+        }
+        return 0
+    })
 }
 
 //Inyecto la lista de productos en el html
@@ -34,9 +43,3 @@ function mostrarProductos (array, cont) {
         </div>`;
     })
 }
-
-obtenerDatosJSON()
-console.log(obtenerDatosJSON())
-// document.querySelector("#filtrar-productos").addEventListener("change", (e)=>{
-//     e.target.value != " " ? mostrarProductos(filtrar(listaProductos, e.target.value)) : mostrarProductos(listaProductos);
-// })
