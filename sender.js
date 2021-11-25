@@ -4,22 +4,8 @@ let nombre = document.getElementById('nombre-contacto');
 let telefono = document.getElementById('telefono-contacto');
 let email = document.getElementById('email-contacto');
 let mensaje = document.getElementById('mensaje-contacto');
-
-//guardar el formulario
-
-const form = document.getElementById('formulario');
-
-//crear un evento para manejar el formulario, cuando hago click en el boton presto atencion
-
-form.addEventListener('submit', (event) => {
-    //detener el refresh de la pagina
-    event.preventDefault()
-
-    sender(nombre.value, telefono.value, email.value, mensaje.value)
-    
-    form.reset() //blanqueo el formulario
-})
-
+const btnEnviar = document.getElementById('btn-contacto');
+console.log(btnEnviar);
 //declaro funcion para enviar
 function sender (nombre, telefono, email, mensaje) {
     Email.send({
@@ -41,3 +27,11 @@ function sender (nombre, telefono, email, mensaje) {
         error => swal("Mensaje no enviado", "Vuelva a probar mas tarde", "error"),
     )  
 }
+
+//crear un evento para manejar el formulario, cuando hago click en el boton presto atencion
+btnEnviar.addEventListener("click", (event) => {
+    //detener el refresh de la pagina
+    event.preventDefault()
+    sender(nombre.value, telefono.value, email.value, mensaje.value)
+    form.reset() //blanqueo el formulario
+})
