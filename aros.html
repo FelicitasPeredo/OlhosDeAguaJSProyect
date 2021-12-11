@@ -93,12 +93,15 @@
         </div>
     </section>
     <main class="container-fluid">
-      <select class="form-select select-material" aria-label="Default select example" id="filtrar-aros">
-        <option selected>Filtrar por Material</option>
-        <option value=" ">Todos</option>
-        <option value="Oro">Oro</option>
-        <option value="Plata">Plata</option>
-    </select>
+      <div class="d-flex">
+        <select class="form-select select-material" aria-label="Default select example" id="filtrar-aros">
+          <option selected>Filtrar por Material</option>
+          <option value=" ">Todos</option>
+          <option value="Oro">Oro</option>
+          <option value="Plata">Plata</option>
+        </select>
+        <button id="convertor">USD</button>
+      </div>
       <section class="d-flex justify-content-center flex-wrap" id="aros-container">
       </section>
   </main>
@@ -154,5 +157,6 @@
     <script src="carritoDeCompras.js"></script>
     <script src="mostrarProductos.js"></script>
     <script src="aros.js"></script>
+    <script src="fetchAPI.js"></script>
 </body>
 </html>

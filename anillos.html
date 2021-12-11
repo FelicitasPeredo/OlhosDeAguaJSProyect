@@ -93,14 +93,17 @@
         </div>
     </section>
     <main class="container-fluid">
-      <select class="form-select select-material" aria-label="Default select example" id="filtrar-anillos">
-        <option selected>Filtrar por Material</option>
-        <option value=" ">Todos</option>
-        <option value="Oro">Oro</option>
-        <option value="Plata">Plata</option>
-    </select>
-        <section class="d-flex justify-content-center flex-wrap" id="anillos-container">
-        </section>
+      <div class="d-flex">
+        <select class="form-select select-material" aria-label="Default select example" id="filtrar-anillos">
+          <option selected>Filtrar por Material</option>
+          <option value=" ">Todos</option>
+          <option value="Oro">Oro</option>
+          <option value="Plata">Plata</option>
+        </select>
+        <button id="convertor">USD</button>
+      </div>
+      <section class="d-flex justify-content-center flex-wrap" id="anillos-container">
+      </section>
     </main>
     <footer class="footer container-fluid d-flex justify-content-center align-items-center">
         <a href="https://www.instagram.com/olhos.deagua/?hl=es" class="p-1"><img id="icon" src="https://i.ibb.co/x28KK3t/instagram.png" alt="instagram"></a>
@@ -154,6 +157,7 @@
     <script src="carritoDeCompras.js"></script>
     <script src="mostrarProductos.js"></script>
     <script src="anillos.js"></script>
+    <script src="fetchAPI.js"></script>
     
 </body>
 </html>

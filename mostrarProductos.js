@@ -41,7 +41,7 @@ function mostrarProductos (array, cont) {
             <div class="card-body formato-texto">
                 <h5 class="card-title">${e.nombre}</h5>
                 <p class="card-text">${e.material}</p>
-                <p class="card-text">${e.precio}</p>
+                <p class="card-text" id="precioProd">${e.precio}</p>
                 <button class="btn-comprar" onclick="capturar(${e.id})">Comprar</button>
             </div>
         </div>`;

@@ -133,7 +133,7 @@
           </div>
         </div>
     </section>
-    <section class="container-fluid d-flex">
+    <section class="container-fluid d-flex m-2">
         <select class="form-select select-format" aria-label="Default select example" id="filtrar-productos">
           <option selected>Filtrar por Material</option>
           <option value=" ">Todos</option>
@@ -147,6 +147,7 @@
           <option value="MenorAMayor">Menor a mayor precio</option>
           <option value="MayorAMenor">Mayor a menor precio</option>
         </select>
+        <button id="convertor">USD</button>
     </section>
     <section class="d-flex justify-content-center flex-wrap" id="productos-container">
     </section>
@@ -206,5 +207,6 @@
     <script src="mostrarProductos.js"></script>
     <script src="index.js"></script>
     <script src="buscador.js"></script>
+    <script src="fetchAPI.js"></script>
 </body>
 </html>
