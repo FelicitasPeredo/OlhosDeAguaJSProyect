@@ -9,9 +9,11 @@ document.addEventListener("DOMContentLoaded", function(){
         })
 })
 
-//Declaro e inicializo las variables del DOM en donde voy a mostrar la lista de productos 
+//Declaro e inicializo las variables del DOM en donde voy a mostrar la lista de productos
 let containerProductos = document.querySelector("#productos-container");
 let listaProductos = JSON.parse(localStorage.getItem("listaProductos"));
+//Declaro e inicializo las variables del DOM para el tipo de cambio del precio
+const btnConvertor = document.querySelector("#convertor");
 
 mostrarProductos(listaProductos, containerProductos);
 
@@ -31,6 +33,11 @@ document.querySelector("#filtrar-productos").addEventListener("change", (e)=>{
     e.target.value != " " ? mostrarProductos(filtrarCategoria(listaProductos, e.target.value), containerProductos) : mostrarProductos(listaProductos, containerProductos);
 })
 
-
-
-
+btnConvertor.addEventListener("click", () => {
+    if (document.querySelector(".card").textContent.includes("USD$")) {
+        mostrarProductos(listaProductos, containerProductos);
+    } 
+    else {
+        obtenerDatos();
+    }
+})

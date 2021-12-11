@@ -1,5 +1,4 @@
 // FETCH API
-const btnConvertor = document.querySelector("#convertor");
 
 const obtenerDatos = () => {
     fetch('https://api.exchangerate.host/convert?from=ARS&to=USD')
@@ -15,7 +14,3 @@ const obtenerDatos = () => {
         )
         .catch((error) => console.log(error))
 }
-
-btnConvertor.addEventListener("click", () => {
-    obtenerDatos();
-});    
