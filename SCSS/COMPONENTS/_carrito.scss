@@ -75,7 +75,7 @@
 	position: fixed; /* Fix the menu to the viewport */
 	top: 12.5rem; /* Add the top value to allow the element to animate up over */
 	left: 0; /* Position to the left of the viewport */
-	z-index: 5; /* Add z-index to make sure the element is always above everything else */
+	z-index: 10; /* Add z-index to make sure the element is always above everything else */
 	width: 100vw; /* Cover the whole width of the viewport */
 	height: 100vh; /* Cover the whole height of the viewport */
 	overflow: scroll; /* Allow scrolling when the content is larger than the viewport */

@@ -10,7 +10,7 @@ nav li {
     display:block;
     opacity:0;
     cursor:pointer;
-    z-index: 10;
+    z-index: 9;
 }
 nav li > ul {
     position: absolute;
@@ -61,7 +61,7 @@ align-items: center;
     border-radius:0.1875rem;
     box-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
     position:relative;
-    z-index: 10;
+    z-index: 9;
 }
 .menu-item-box {
     letter-spacing: 0.0625rem;
@@ -79,7 +79,7 @@ align-items: center;
     border-radius:0.1875rem;
     box-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
     position:relative;
-    z-index: 10;
+    z-index: 9;
 }
 .menu-item-box:hover {
     color: #D9B650;

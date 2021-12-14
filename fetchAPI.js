@@ -8,7 +8,7 @@ const obtenerDatos = () => {
                 let TC = parseFloat(data.result)
                 let ARSPrecio = e.innerHTML
                 let USDPrice = ARSPrecio * TC
-                e.innerHTML = `${USDPrice.toFixed(2)} USD$`
+                e.innerHTML = `${USDPrice.toFixed(2)} $USD`
             });
         }
         )

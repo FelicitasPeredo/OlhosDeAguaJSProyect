@@ -1,3 +1,5 @@
+//Defino en una variable el boton que voy a utilizar para disparar el evento
+const btnAgregarDestinatario = document.querySelector("#btnAgregarDestinatario");
 let cupon = "OLHOSESPECIAL"
 const listaUsuarios = [];
 let productosCarrito = document.querySelector("#productos-carrito");
@@ -52,7 +54,7 @@ const agregarNuevoDestinatario = () => {
         dni === "" ||
         cuponDesc === ""
       ) {
-        return addAlert("Completa los campos vacios!", "", "error");
+        return addAlert("Completa los campos vacios.", "", "error");
       } else {
         const nuevoDestinatario = new datosDestinatario(mailUsuario, nombre, apellido, telefono, calle, altura, dpto, CP, provincia, dni, cuponDesc);
         console.log(nuevoDestinatario);
@@ -77,41 +79,11 @@ const agregarNuevoDestinatario = () => {
     } 
 }
 
-function mostrarCarritoDelDestinatario(array){
-    productosCarrito.innerHTML="";
-    for (e of array){
-        productosCarrito.innerHTML+=`
-        <tr>
-            <th scope="row">1</th>
-            <td>${e.nombre}</td>
-            <td>${e.material}</td>
-            <td>${e.precio}</td>
-        </tr>`
-    }
-}
-
-function mostrarProductos() {
-    if(localStorage.getItem("carrito")){
-        //Borro el msj de carrito vacio
-        let carritoVacio = document.querySelector("#carritoVacio");
-        document.querySelector("#visualCarrito").removeChild(carritoVacio);
-        //Reemplazo el carrito vacio por los productos seleccionados
-        mostrarCarritoDelDestinatario(listaCarrito);
-    }
-}
-
-mostrarProductos();
-
-//Defino en una variable el boton que voy a utilizar para disparar el evento
-const btnAgregarDestinatario = document.querySelector("#btnAgregarDestinatario");
 //Que mi funcion ocurra cuando el usuario hace click en el boton
-
 btnAgregarDestinatario.addEventListener("click", (e) => {
     e.preventDefault();
     agregarNuevoDestinatario();
 });
-
-
 
 
 
